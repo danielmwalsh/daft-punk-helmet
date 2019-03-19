@@ -301,7 +301,7 @@ void wink(int x, int t, uint32_t color) {
 }
 
 
-void horizontalWhipe(int x, int t, uint32_t color) {
+void horizontalWipe(int x, int t, uint32_t color) {
   for (int i = 0; i < x; i++) {
     for (int i = 0; i < NUM_LEDS; i++) {
       for (int j = 0; j < NUM_SEGMENTS; j++ ) {
@@ -322,7 +322,7 @@ void horizontalWhipe(int x, int t, uint32_t color) {
   }
 }
 
-void verticalWhipe(int x, int t, uint32_t color) {
+void verticalWipe(int x, int t, uint32_t color) {
   for (int i = 0; i < x; i++) {
     for (int j = 0; j < NUM_SEGMENTS; j++) {
       for (int i = 0; i < NUM_LEDS; i++ ) {
@@ -406,8 +406,8 @@ void animateLEDs() {
   stackUp();
   dropDown();
   wink(5, 50, CRGB::Green);
-  horizontalWhipe(5, 50, CRGB::Blue);
-  verticalWhipe(5, 50, CRGB::Blue);
+  horizontalWipe(5, 50, CRGB::Blue);
+  verticalWipe(5, 50, CRGB::Blue);
   flash(5, 150, CRGB::Red);
   trickleDown(5, 100, CRGB::Blue);
   checkers(5, 200, CRGB::Yellow);
